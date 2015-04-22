@@ -30,7 +30,7 @@ class Search extends AbstractApi
      */
     public function repositories($q, $sort = 'stars', $order = 'desc', $page = 1, $per_page = 5)
     {
-        return $this->get('search/repositories', array('q' => $q, 'sort' => 'stars', 'order' => 'desc', 'page' => $page, 'per_page' => $per_page));
+        return $this->get('search/repositories', array('q' => $q, 'sort' => $sort, 'order' => $order, 'page' => $page, 'per_page' => $per_page));
     }
 
     /**

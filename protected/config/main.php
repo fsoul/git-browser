@@ -56,7 +56,7 @@ return array(
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<controller:\w+>/<action:\w+>/<page:\d+>'=>'<controller>/search',
-                '<controller:\w+>/<action:\w+>/<owner:\w+>/<repo:\w+>'=>'<controller>/index',
+                '<controller:\w+>/<action:\w+>/<username:\w+>/<repository:\w+>'=>'<controller>/index',
                 '<controller:\w+>/<action:\w+>/<login:\w+>'=>'<controller>/user',
                 '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
