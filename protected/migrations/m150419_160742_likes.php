@@ -7,13 +7,13 @@ class m150419_160742_likes extends CDbMigration
         $this->createTable('project_likes',array(
             'id'=>'pk',
 
-            'git_id'         =>'int(11) NOT NULL'
+            'project_name'         =>'varchar(255) NOT NULL'
         ));
 
         $this->createTable('users_likes',array(
             'id'=>'pk',
 
-            'user_id'         =>'int(11) NOT NULL'
+            'user_login'         =>'varchar(255) NOT NULL'
         ));
     }
 

@@ -1,0 +1,105 @@
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#page {
+    flex: 1;
+}
+.git-wrap{
+    max-width: 1170px;
+    margin: 50px 10px;
+}
+.layout-top{
+    margin-top: 20px;
+    height: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7b7b7b;
+}
+.git-search{
+    margin: 12px;
+}
+.brand-link{
+    padding: 12px 10px 12px 50px;
+    font-size: 24px;
+    height: 50px;
+    color: #000000;
+    line-height: 50px;
+
+    background: url("/images/git-browser.png") no-repeat 10px center;
+}
+.brand-link:hover{
+    text-decoration: none;
+}
+.grey-text{
+    color: #7b7b7b;
+    padding-right: 10px;
+}
+.git-users-table>tbody>tr:hover{
+    background: #f9f9f9;
+}
+.git-users-table>tbody>tr>td{
+    vertical-align: middle;
+    font-size: 18px;
+    padding-left: 20px;
+}
+.item-wrap{
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 15px 25px;
+    background-color: #fafafa;
+}
+.git-info>h1{
+    margin: 25px 15px;
+}
+.row-1>span, .row-3>span{
+    margin-right: 15%;
+}
+.git-img{
+    width: 230px;
+    height: 230px;
+}
+.git-img>img{
+    width: 100%;
+    height: 100%;
+}
+.git-img-wrap{
+    width: 230px;
+}
+.like-user{
+    width: 230px;
+    margin-top: 25px;
+    text-align: center;
+}
+.git-user-info{
+    margin-left: 35px;
+}
+.git-user-info>h4{
+    margin-bottom: 35px;
+}
+.git-btn{
+    width: 90px;
+}
+#footer{
+    height: 220px;
+    background-color: #ecf0f1;
+}
+#footer>div{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+#footer>div>p{
+    margin-bottom: 5px;
+    text-indent: 10px;
+}
+.breadcrumb{
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+.git-search-query{
+    margin: 10px;
+}
