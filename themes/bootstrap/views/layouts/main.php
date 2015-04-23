@@ -42,8 +42,8 @@
         <a href="/" class="brand-link">
             <?= Yii::app()->name; ?>
         </a>
-        <form class="git-search form-search pull-right" method="post" action="/git/search">
-            <input name="search-query" type="text" class="input-medium search-query" placeholder="Search">
+        <form class="git-search form-search pull-right" method="get" action="/git/search">
+            <input name="q" type="text" class="input-medium search-query" placeholder="Search">
             <button type="submit" class="btn git-btn">Search</button>
         </form>
     </div>
@@ -70,10 +70,10 @@
 </div><!-- page -->
 <div id="footer">
     <div>
-        <p>Test Task For MobiDev</p>
-        <p>My Email: <a href="mailto:<?php echo Yii::app()->params['adminEmail']; ?>"><?php echo Yii::app()->params['adminEmail']; ?></a></p>
-        <p>My Skype: <a href="skype:v.bilinskyi?call">v.bilinskyi</a></p>
-        <p>My Resume: <a href="/images/resume.pdf" target="_blank">PDF</a></p>
+        <p>MobiDev Test Task</p>
+        <p>Email: <a href="mailto:<?php echo Yii::app()->params['adminEmail']; ?>"><?php echo Yii::app()->params['adminEmail']; ?></a></p>
+        <p>Skype: <a href="skype:v.bilinskyi?call">v.bilinskyi</a></p>
+        <p>Resume: <a href="/images/resume.pdf" target="_blank">PDF</a></p>
     </div>
 </div><!-- footer -->
 </body>

@@ -8,37 +8,36 @@
  */
 class GitController extends Controller
 {
-    private $client;
     public $breadcrumbs = array();
-
-    public function __construct()
-    {
-        $this->client = new \Github\Client();
-        $this->client->authenticate('67a986bee9245844c299c317ee64f046beec7eb8', \Github\Client::AUTH_HTTP_TOKEN);
-    }
-
+    
     public function actionIndex($username = 'yiisoft', $repository = 'yii')
     {
-        $data['item'] = $this->client->api('repo')->show($username, $repository);
-        $data['item']['contributors'] = $this->client->api('repo')->contributors($username, $repository);
+        $client = new \Github\Client();
+        $data['item'] = $client->api('repo')->show($username, $repository);
+        $data['item']['contributors'] = $client->api('repo')->contributors($username, $repository);
         foreach ($data['item']['contributors'] as $k => $person) {
             $model = Users_likes::model()->find('user_login=:user_login', array(':user_login' => $person['login']));
             $data['item']['contributors'][$k]['model'] = $model;
         }
 
-        $this->render('git/index', $data);
+        $this->render('index', $data);
     }
 
-    public function actionSearch($page = null, $per_page = 10)
+    public function actionSearch()
     {
-        $data['query'] = $_POST['search-query'];
+        $client = new \Github\Client();
+        $page = $_GET['page'] || 1;
+        $data['query'] = $_GET['q'];
         if (!empty($data['query'])) {
-            $data['result'] = $this->client->api('search')->repositories($data['query'], 'stars', 'desc', $page, $per_page);
+            $data['result'] = $client->api('search')->repositories($data['query'], 'stars', 'desc', $page);
             foreach ($data['result']['items'] as $k => $item) {
                 $model = Project_likes::model()->find('project_name=:project_name', array(':project_name' => $item['owner']['login'] . '_' . $item['name']));
                 $data['result']['items'][$k]['model'] = $model;
             }
-            $this->render('git/search', $data);
+            $data['pages'] = new CPagination($data['result']['total_count']);
+            $data['pages']->pageSize = 10;
+
+            $this->render('search', $data);
         } else {
             $this->redirect('/');
         }
@@ -46,9 +45,11 @@ class GitController extends Controller
 
     public function actionUser($login)
     {
-        $data['user'] = $this->client->api('user')->show($login);
+        $client = new \Github\Client();
+        $data['user'] = $client->api('user')->show($login);
         $data['user']['model'] = Users_likes::model()->find('user_login=:user_login', array(':user_login' => $login));
-        $this->render('git/user', $data);
+
+        $this->render('user', $data);
     }
 
     public function actionLikeBtn()

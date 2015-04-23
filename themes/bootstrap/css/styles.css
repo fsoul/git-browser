@@ -5,6 +5,7 @@ body{
 }
 #page {
     flex: 1;
+    min-width: 680px;
 }
 .git-wrap{
     max-width: 1170px;
@@ -66,6 +67,7 @@ body{
 }
 .git-img-wrap{
     width: 230px;
+    margin-left: 100px;
 }
 .like-user{
     width: 230px;
@@ -82,6 +84,8 @@ body{
     width: 90px;
 }
 #footer{
+    width: 100%;
+    min-width: 680px;
     height: 220px;
     background-color: #ecf0f1;
 }
@@ -102,4 +106,12 @@ body{
 }
 .git-search-query{
     margin: 10px;
+}
+.pagination{
+    text-align: center;
+}
+.active>a{
+    background: #337ab7 !important;
+    border-color: #337ab7 !important;
+    color: #ffffff !important;
 }

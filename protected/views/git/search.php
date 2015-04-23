@@ -31,8 +31,16 @@ $this->breadcrumbs = array(
             </p>
         </div>
         <? endforeach; ?>
+        <div class="pagination">
         <?php $this->widget('CLinkPager', array(
             'pages' => $pages,
+            'header' => '',
+            'selectedPageCssClass' => 'active',
+            'hiddenPageCssClass' => 'disabled',
+            'htmlOptions' => array(
+                'class' => 'link-page',
+            ),
         )) ?>
+        </div>
     </div>
 </div>
