@@ -9,7 +9,7 @@ INSTALLATION
 
 1. Download ZIP or clone this repository
 
-`git clone https://github.com/fsoul/git-browser.git`
+```git clone https://github.com/fsoul/git-browser.git```
 
 2. Create db 'git'
 
