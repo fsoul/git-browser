@@ -17,4 +17,4 @@ INSTALLATION
 
 3. Move to the 'localhost/protected' and install db migration
 
-`php migration install`
+`yiic migrate`
