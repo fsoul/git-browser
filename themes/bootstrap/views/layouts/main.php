@@ -70,10 +70,9 @@
 </div><!-- page -->
 <div id="footer">
     <div>
-        <p>MobiDev Test Task</p>
         <p>Email: <a href="mailto:<?php echo Yii::app()->params['adminEmail']; ?>"><?php echo Yii::app()->params['adminEmail']; ?></a></p>
         <p>Skype: <a href="skype:v.bilinskyi?call">v.bilinskyi</a></p>
-        <p>Resume: <a href="/images/resume.pdf" target="_blank">PDF</a></p>
+        <p>Resume: <a href="/images/Junior PHP developer.pdf" target="_blank">PDF</a></p>
     </div>
 </div><!-- footer -->
 </body>
