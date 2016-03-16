@@ -1,20 +1,12 @@
 Simple GitHub-Browser
 =============================
 
-MobiDev Test Task
-
 
 INSTALLATION
 ------------
 
 1. Download ZIP or clone this repository
 
-`git clone https://github.com/fsoul/git-browser.git`
+git clone https://github.com/fsoul/git-browser.git
 
-2. Create db 'git'
-
-`CREATE DATABASE git`
-
-3. Move to the 'localhost/protected' and install db migration
-
-`yiic migrate`
+2. Create db 'git' and install db migration or import db from file "git.sql"
